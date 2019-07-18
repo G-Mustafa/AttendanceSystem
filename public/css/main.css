@@ -1,0 +1,226 @@
+table,
+td {
+    border: 1px solid #333;
+}
+
+thead{
+    background-color: #333;
+    color: #fff;
+}
+
+header {
+    height: 58px;
+}
+
+.jumbo {
+    background-color: rgba(238, 238, 238, 0.6) !important;
+    background-image: url(/public/images/image.jpg);
+    background-blend-mode: color;
+    margin-bottom: 0;
+}
+.addbtn {
+    display: block;
+    margin: auto;
+    border: none;
+    color: #2f3c7e;
+    background-color: inherit;
+}
+
+.attendance-mark {
+    display: inline;
+    margin-right: 35%;
+}
+
+.heading-books {
+    margin-top: 2rem;
+}
+
+.addbtn:hover {
+    transform: scale(1.2);
+}
+
+#cancel-btn{
+    margin-top: 12px;
+}
+
+#login,#logout {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.form-btn {
+    display: block;
+    width: 40%;
+    margin: auto;
+}
+
+.nav-bg {
+    background-color: #fbeaeb;
+    color: #2f3c7e;
+}
+
+.banner {
+    height: 10%;
+    background-color: #2f3c7e;
+    color: #fbeaeb;
+    height: 4rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.banner-text {
+    margin: auto 10px;
+}
+
+.con-text {
+    opacity: 1;
+}
+.cont-books {
+    width: 60%;
+    margin: auto;
+    background-color: #fbeaeb;
+    padding: 20px;
+    border-radius: 10%;
+}
+
+body {
+    font-family: 'Baloo Da', cursive;
+    font-family: 'Raleway', sans-serif;
+}
+.footer-bg {
+    background-color: #E3E3E3;
+    margin-top: 2rem;
+}
+
+.signup-form {
+    width: 70%;
+    margin: auto;
+    margin-top: 3rem;
+}
+.form-heading {
+    margin-bottom: 1.5rem;
+}
+
+.form-heading,.heading {
+    font-family: 'Courgette', cursive;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+.bottom-cont {
+    background-color:#f1f1f1;
+    padding: 16px;
+}
+
+img.avatar {
+    width: 25%;
+    border-radius: 50%;
+}
+  
+.mycontainer {
+    padding: 16px;
+    width: 90%;
+    margin: auto;
+}
+  
+span.psw {
+    float: right;
+    padding-top: 16px;
+    margin-bottom: 12px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+  
+  /* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+}
+  
+  /* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+  
+.close:hover,.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.book-link {
+    border: 1px solid black;
+}
+  
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+  
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+  
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    #cancel-btn {
+       width: 100%;
+       display: block;
+    }
+}
+table {
+    width: 90%;
+    margin: auto;
+}
+
+@media (max-width: 576px) {
+    .heading {
+        font-size: 40px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .modal-content {
+        width: 80%;
+    }
+    .banner {
+        height: 80px;
+    }
+    .cont-books {
+        width: 80%;
+    }
+    .attendance-mark{
+        margin-right: 5px;
+    }
+}

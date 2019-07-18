@@ -1,0 +1,28 @@
+<% include partials/header %>
+
+<main>
+    <h1 class="text-center heading-books">Attendance Sheet</h1>
+    <em class="text-center" style="margin: 1rem 0;display: block;">marked on <%= date %></em>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Attendance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% sheet.forEach((item)=>{ %>
+                <tr>
+                    <td><%= item.name %></td>
+                    <% if(item.isPresent){ %>
+                        <td>Present</td>
+                    <% }else{ %>
+                        <td>Absent</td>
+                    <% } %>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</main>
+
+<% include partials/footer %>

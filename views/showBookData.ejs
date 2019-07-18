@@ -1,0 +1,71 @@
+<% include partials/header %>
+<main class="main">
+    <h1 class="text-center" style="margin-top: 20px;"><%= book.title +"  "+ book.session %></h1>
+    <p class="text-center"><%= book.description %></p>
+    <div class="att-data">
+        <button class="btn btn-outline-primary" onclick="document.getElementById('id01').style.display='block'">Mark Attendance</button>
+        <p>No. of attendees: <%= book.noOfAttendees %></p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>% Attendance</th>
+                <th>No. of days absent</th>
+                <th>No. of days present</th>
+                <th>Last holiday at</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% inform.forEach((item)=>{ %>
+                <tr>
+                    <td><%= item[0] %></td>
+                    <td><%= Math.round(item[1]*100/item[2]) %></td>
+                    <td><%= item[2] - item[1] %></td>
+                    <td><%= item[1] %></td>
+                    <td><%= item[3] %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <section>
+        <div id="id01" class="modal">   
+            <form class="modal-content animate" action="/attendanceBooks/<%= book.id %>/sheets" method="POST">
+                <div class="mycontainer">
+                    <h2 class="text-center">Attendance Book</h2>
+                    <% inform.forEach((item)=>{ %>
+                        <div class="form-group">
+                            <p class="attendance-mark"><%= item[0] %></p>
+                            <div style="display: inline;">
+                                <input type="radio" id="present"
+                                     name=<%= item[0] %> value="true">
+                                <label for="present">present</label>
+        
+                                <input type="radio" id="absent"
+                                     name=<%= item[0] %> value="false">
+                                <label for="absent">absent</label>
+                            </div>
+                        </div>
+                    <% }) %>
+                    
+                    <button class="btn btn-outline-primary form-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section>
+        <h2 class="text-center heading-books">View Previous Attendance Sheets</h2>
+        <ul class="row">
+            <% book.attendanceSheets.forEach((item)=>{ %>
+                <li class="col-sm-4 col-12"><a href="/attendanceBooks/<%= book.id %>/sheets/<%= item %>"><%= item %></a></li>
+            <% }) %>  
+        </ul>
+    </section>
+</main>
+
+<!-- javascript -->
+<script src="../public/js/index.js"></script>
+
+
+<% include partials/footer %>

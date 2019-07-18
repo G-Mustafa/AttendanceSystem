@@ -1,0 +1,75 @@
+<% include partials/header %>
+<main>
+    <section>
+        <div class="jumbotron jumbo">
+            <div class="container con-text">
+                <h1 class="display-4 heading">Attendance System</h1>
+                <p class="lead">A complete all in one free solution to your attendance needs.</p>
+                <hr class="my-4">
+                <p class="desc">Be it an organisation or a school.This solution is answer to all your needs.On the top of that it is free and very secure too.</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-around banner">
+            <p class="banner-text">
+                100% secure,high functional,fast and capable
+            </p>
+            <p class="banner-text">
+                User-friendly interface and reliable
+            </p>
+        </div>
+    </section>
+    <section class="signup">
+        <div class="signup-form">
+            <h3 class="text-center form-heading">Sign up</h3>
+            <form action="/register" method="post">
+                <div class="form-group row">
+                    <label class="col-sm-3" for="username">Username</label>
+                    <input class="col-sm-9 form-control" type="text" name="username" id="username" required>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3" for="password">Password</label>
+                    <input class="col-sm-9 form-control" type="password" name="password" id="password" required>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3" for="username">Email</label>
+                    <input class="col-sm-9 form-control" type="email" name="email" id="email" required>
+                </div>
+                <button class="btn btn-outline-primary form-btn">Sign up</button>
+            </form>
+        </div>
+    </section>
+    <section>
+        <div id="id01" class="modal">   
+            <form class="modal-content animate" action="/login" method="POST">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="/public/images/login_avatar.png" alt="Avatar" class="avatar">
+                </div>
+                <div class="mycontainer">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input class="form-control" type="text" name="username" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input class="form-control" type="password" name="password" id="password" required>
+                    </div>
+                    <button class="btn btn-outline-primary form-btn">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+                <div class="container bottom-cont">
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-outline-danger btn-sm" id="cancel-btn">Cancel</button>
+                  <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+
+
+<!-- Javascript -->
+<script src="/public/js/index.js"></script>
+
+<% include partials/footer %>
